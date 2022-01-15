@@ -27,7 +27,7 @@ namespace JayTools.JayEasing.Editor.Windows
 
         #region GUI
 
-        [MenuItem(itemName: "Ease Preview", menuItem = "Tools/JayTools/JayEasing")]
+        [MenuItem(itemName: "Ease Preview", menuItem = "Tools/JayTools/JayEasing/EasePrewiew")]
         public static void ShowWindow()
         {
             var window = GetWindow<JayEasingPreviewWindow>(typeof(SceneView));
@@ -55,11 +55,21 @@ namespace JayTools.JayEasing.Editor.Windows
             EditorGUILayout.LabelField("Preview", EditorStyles.boldLabel);
             GUILayout.BeginHorizontal();
             GUILayout.FlexibleSpace();
+            GUI.enabled = false;
             EditorGUILayout.CurveField(curve, Color.cyan, new Rect(0,0,1,1), GUILayout.MinHeight(300), GUILayout.Width(400));
+            GUI.enabled = true;
             GUILayout.FlexibleSpace();
             GUILayout.EndHorizontal();
             EditorGUILayout.Space();
 
+            GUILayout.BeginHorizontal();
+            GUILayout.FlexibleSpace();
+            EditorGUILayout.LabelField("(tip: use Arrow Up & Down to move)");
+            GUILayout.FlexibleSpace();
+            GUILayout.EndHorizontal();
+            
+            EditorGUILayout.Space();
+            
             index = EditorGUILayout.Popup("Ease Methods", index, fieldNames);
             
             if (EditorGUI.EndChangeCheck())
