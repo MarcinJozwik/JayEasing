@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b511d8cf42ac4061b8a21c1277d2fa73, type: 3}
+  m_Name: SmoothStep3
+  m_EditorClassIdentifier: 
+  EaseA: {fileID: 11400000, guid: 7b133fe20624e4d4496fdb529541caf5, type: 2}
+  EaseB: {fileID: 11400000, guid: bb23881e69f3aee45b167609e1ef3cc5, type: 2}
